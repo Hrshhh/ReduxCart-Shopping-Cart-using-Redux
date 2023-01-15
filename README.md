@@ -6,5 +6,7 @@ Filtering shops based on AREA and CATEGORY
 
 Closing Date should not be before Opening Date, Shop Name only alphabets and for Area, Category, OpeningDate and Closing Date DROPDOWN is required.
 
+For this cart, actions include Adding an item to the cart, Removing an item from the cart, and Selecting Area and Category of the shop.
+
 ![5c9f4aba-e40c-4700-a078-15c87375bcff](https://user-images.githubusercontent.com/86558899/211046794-91d72e2a-2056-4904-a2e7-528debbf6b55.jpg)
 
