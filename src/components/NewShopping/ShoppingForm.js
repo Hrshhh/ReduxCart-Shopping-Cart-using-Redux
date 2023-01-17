@@ -36,9 +36,7 @@ const ShoppingForm = (props) => {
     
 
   }
-
   
-
   const validCloseDate =(closeDate,openDate) =>{
     const open_date = new Date(openDate);
     const close_date = new Date(closeDate)
