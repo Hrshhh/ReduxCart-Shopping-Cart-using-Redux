@@ -6,10 +6,7 @@ import { useDispatch,useSelector } from 'react-redux';
 const ShoppingForm = (props) => {
 
   const dispatch = useDispatch();
-  const {shop_listt} = useSelector((Appstate) => 
-  ({shop_listt: Appstate.user.shop_items
-  }))
-// console.log("s",shop_listt)
+  
   const [formValue , setFormValue] = useState({title:"",area:"Thane",category:"Grocery", opn_date:"", cls_date:""});
   const onHandleChange = (event)=> {
 
