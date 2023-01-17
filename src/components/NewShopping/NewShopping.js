@@ -2,18 +2,9 @@ import React,{useState} from 'react';
 import ShoppingForm from './ShoppingForm';
 import './NewShopping.css';
 
-const NewShopping = (props) => {
+const NewShopping = () => {
   const [isEditing, setIsEditing] = useState(false);
   
-  const saveShopDataHandler = (enteredShoppingData) => {
-    const shoppingData = [{
-      ...enteredShoppingData,
-      id: Math.random().toString()
-    }];
-    props.onAddShop(shoppingData);
-    setIsEditing(false);
-  };
-
   const startEditingHandler = () => {
     setIsEditing(true);
   };
@@ -28,7 +19,7 @@ const NewShopping = (props) => {
         <button onClick={startEditingHandler}>Add New Shop</button>
       )}
       {isEditing && (
-        <ShoppingForm onSaveShopData={saveShopDataHandler} onCancel={stopEditingHandler}/>
+        <ShoppingForm onCancel={stopEditingHandler}/>
       )}
       
     </div>
