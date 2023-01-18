@@ -42,13 +42,13 @@ const ShoppingItem = () => {
     
     finale.map((elem) => {
       return ( <Card className='shopping-item'>
-      {elem.opn_date} 
+      {elem.text.opn_date} 
         <div className='shopping-item__description'>
-          <h2>{elem.title}</h2>
-          <div className='shopping-item__area'>{elem.area}</div>
-          <div className='shopping-item__cat'>{elem.category}</div>
+          <h2>{elem.text.title}</h2>
+          <div className='shopping-item__area'>{elem.text.area}</div>
+          <div className='shopping-item__cat'>{elem.text.category}</div>
         </div>
-        {elem.cls_date}
+        {elem.text.cls_date}
         <button onClick={() => dispatch(deleteTodo(elem.id))}>Delete</button>
       </Card>
       )
