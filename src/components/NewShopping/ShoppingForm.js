@@ -6,7 +6,7 @@ import { useDispatch,useSelector } from 'react-redux';
 const ShoppingForm = (props) => {
 
   const dispatch = useDispatch();
-  
+  var id = "sd";
   const [formValue , setFormValue] = useState({title:"",area:"Thane",category:"Grocery", opn_date:"", cls_date:""});
   const onHandleChange = (event)=> {
 
@@ -17,25 +17,17 @@ const ShoppingForm = (props) => {
     case "title":
       (re.test(value) ? setFormValue({...formValue, "title": value}): setFormValue(""))
       break;
-    case "area":
-      setFormValue({...formValue, "area": value});
-      break;
-    case "category":
-      setFormValue({...formValue, "category": value})
-      break;
-    case "opn_date":
-      setFormValue({...formValue, "opn_date": value,"cls_date":""});
-      break;
     case "cls_date":
       if(validCloseDate(value,formValue.opn_date))
       setFormValue({...formValue, "cls_date": value});
-      
       break;
     default:
+      setFormValue({...formValue, [name]: value});
     }
     
 
   }
+
   
   const validCloseDate =(closeDate,openDate) =>{
     const open_date = new Date(openDate);
